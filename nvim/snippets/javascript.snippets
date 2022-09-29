@@ -1,0 +1,39 @@
+# react component
+snippet ~jsx_component
+	import React from "react"
+
+	const ComponentName = () => {
+		return 
+	}
+
+	export default ComponentName
+
+# shorthand function
+snippet ~js_function
+	const functionName = () => {}
+
+# switch case
+snippet ~js_switch
+	switch(target){
+		case "value": 
+		
+		default:
+			return
+	}
+
+# vite config
+snippet ~js_vite_config
+	import { defineConfig } from "vite";
+	import react from "@vitejs/plugin-react";
+
+	// https://vitejs.dev/config/
+	export default defineConfig({
+		plugins: [react()],
+		server: {
+			port: 3000,
+		},
+	}
+
+# console.log
+snippet ~js_log
+	console.log

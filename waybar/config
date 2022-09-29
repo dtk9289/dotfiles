@@ -1,0 +1,85 @@
+// vim: ft=jsonc
+{
+	"layer": "bottom", // Waybar at top layer
+	"height": 18, // Waybar height
+	"output": "eDP-1",
+	"modules-left": ["sway/workspaces", "sway/mode"],
+	"modules-center": "",
+	"modules-right": [
+		"network",
+		"cpu",
+		"memory",
+		"backlight",
+		"pulseaudio",
+		"battery",
+		"clock",
+		"tray"
+	],
+	// Modules configuration
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"tray": {
+		// "icon-size": 21,
+		"spacing": 10
+	},
+	"clock": {
+		"tooltip": false,
+		"format": "{:%Y-%m-%d %H:%M}"
+	},
+	"cpu": {
+		"tooltip": false,
+		"format": "{usage}% CPU"
+	},
+	"memory": {
+		"tooltip": false,
+		"format": "{}% RAM"
+	},
+	"backlight": {
+		// "device": "acpi_video1",
+		"format": "{percent}% {icon}",
+		"format-icons": ["", ""],
+		"on-scroll-up": "brightnessctl set 10+",
+		"on-scroll-down": "brightnessctl set 10-"
+	},
+	"battery": {
+		"tooltip": false,
+		"states": {
+			// "good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		// "format-good": "", // An empty format will hide the module
+		// "format-full": "",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		//"scroll-step": 1,
+		"format": "{volume}% {icon}",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-muted": "{volume}% ",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5"
+	}
+}
+
