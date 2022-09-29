@@ -45,10 +45,11 @@ bindswitch --reload --locked lid:on exec 'swaymsg "output * dpms on"'
 
 # Example configuration:
 #
+set $swaylock_cmd = 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 0000008 --separator-color 00000000 --fade-in 0.2'
  exec swayidle -w \
-        timeout 800 'swaylock -f -c 000000' \
+        timeout 800 $swaylock_cmd \
         timeout 805 'swaymsg "output * dpms off"' \
-	resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 000000'
+	resume 'swaymsg "output * dpms on"' before-sleep $swaylock_cmd
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -82,7 +83,7 @@ bindswitch --reload --locked lid:on exec 'swaymsg "output * dpms on"'
     bindsym $mod+d exec $menu
 
     # Lock screen
-    bindsym $mod+Alt+l exec 'swaylock -f -c 000000 && systemctl suspend'
+    bindsym $mod+Alt+l exec 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
