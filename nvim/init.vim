@@ -37,6 +37,9 @@ if has('nvim')
   set inccommand=split
 endif
 
+
+" disable splash
+set shortmess=I
 " Suppress appending <PasteStart> and <PasteEnd> when pasting
 set t_BE=
 
