@@ -1,72 +1,107 @@
 * {
-  transition: none;
-  box-shadow: none;
+    font-family: "Hack NF";
+    font-size: 12px;
 }
 
-#waybar {
-  color: @base04;
-  background: @base01;
+
+window#waybar { 
+    background-color: transparent; 
+    color: #ffffff;    
 }
+
+
+.modules-left {
+	background-color: transparent;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.modules-right {
+	background-color: transparent;
+	padding: 0px 5px 0px 0px;
+}
+
+
+#custom-scratch {
+	background-color: transparent;
+	color: #b8b8b8;
+	padding: 0px 9px 0px 9px;
+}
+
 
 #workspaces {
-  margin: 0 4px;
-}
-
-#workspaces button {
-  margin: 2px 0;
-  padding: 0 6px;
-  color: @base05;
-}
-
-#workspaces button.visible {
-}
-
-#workspaces button.focused {
-  border-radius: 4px;
-  background-color: @base02;
-}
-
-#workspaces button.urgent {
-  color: rgba(238, 46, 36, 1);
-}
-
-#tray {
-  margin: 4px 16px 4px 4px;
-  border-radius: 4px;
-  background-color: @base02;
-}
-
-#tray * {
-  padding: 0 6px;
-  border-left: 1px solid @base00;
-}
-
-#tray *:first-child {
-  border-left: none;
-}
-
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail, #clock, #temperature {
-  margin: 4px 2px;
-  padding: 0 6px;
-  background-color: @base02;
-  border-radius: 4px;
-  min-width: 20px;
-}
-
-#pulseaudio.muted {
-  color: @base0F;
-}
-
-#pulseaudio.bluetooth {
-  color: @base0C;
-}
-
-#clock {
-  margin-left: 12px;
-  margin-right: 4px;
   background-color: transparent;
 }
 
-#temperature.critical {
-  color: @base0F;
+
+#workspaces button {
+	padding: 0px 11px 0px 11px; 
+ 	min-width: 1px;
+	color: #ffffff;
 }
+
+
+#workspaces button.focused { 
+	background-color: transparent;
+	color: #ffffff;
+  border-radius: 0;
+  border-bottom: 1px solid yellow;
+}
+
+#workspaces button:hover{
+  background-color: transparent;
+  color: red;
+}
+
+
+#mode { 
+	 background-color: #900000;
+	 color: #ffffff;
+     padding: 0px 5px 0px 5px;
+     border: 1px solid #2f343a;
+}
+
+
+#window {
+	 color: #ffffff;
+	 background-color: #285577;
+   padding: 0px 10px 0px 10px;
+}
+
+
+window#waybar.empty #window {
+	background-color: transparent;
+	color: transparent;
+}
+
+
+window#waybar.empty {
+	background-color: #323232;
+}
+
+
+#network, #temperature, #backlight, #pulseudio, #battery {
+    padding: 0px 10px 0px 10px;
+}
+    
+
+#clock {
+	margin: 0px 10px 0px 10px;
+}
+
+
+#tray{
+   padding: 0px 8px 0px 5px;
+   margin: 0px 5px 0px 5px;
+}
+
+
+#battery.critical {
+   color: #ff5555;
+}
+
+
+#network.disconnected {
+    color: #ff5555;
+}
+
