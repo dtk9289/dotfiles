@@ -24,12 +24,12 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output "*" bg ~/.config/sway/images/wallpaper.jpg fill
 #
 # Example configuration:
 #
@@ -44,8 +44,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Example configuration:
 #
  exec swayidle -w \
-        timeout 300 'swaylock -f -c 000000' \
-        timeout 305 'swaymsg "output * dpms off"' \
+        timeout 3000 'swaylock -f -c 000000' \
+        timeout 3005 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -117,7 +117,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+Right move right
 #
 # Workspaces:
-#
+    bindsym $mod+z+1 move workspace to eDP-1
+    bindsym $mod+z+2 move workspace to DP-1
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
