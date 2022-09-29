@@ -3,3 +3,5 @@
 
 ### pacman
 wofi brightnessctl neovim archlinux-keyring git openssh networkmanager swaybg
+### yay 
+swaylock-effects
