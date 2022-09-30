@@ -17,7 +17,7 @@
 
 
 tab>stack {
-	height: 32px !important;
+	height: 24px !important;
 }
 
 /* Extra margin for the first and last tabs */
@@ -271,13 +271,9 @@ tab[selected]:-moz-window-inactive {
 .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-background) !important;
 	background-image: none !important;
-	border: none !important;
 	border-image: none !important;
 	margin-left: -1px !important;
 	margin-right: -1px !important;
-	box-shadow: 1px 0 var(--gnome-toolbar-border-color), 1px 0 3px rgba(0, 0, 0, 0.08),
-		-1px 0 var(--gnome-toolbar-border-color), -1px 0 3px rgba(0, 0, 0, 0.08),
-		inset 0 -1px var(--gnome-toolbar-border-color) !important;
 }
 
 .tab-background[selected=true]:-moz-window-inactive {
@@ -289,7 +285,6 @@ tab[selected]:-moz-window-inactive {
 #TabsToolbar .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected=true]) {
 	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 	border-image: none !important;
-	box-shadow: inset 0 1px var(--gnome-toolbar-border-color), inset 0 -1px var(--gnome-toolbar-border-color) !important;
 }
 
 /* Tabs scroll buttons hover */
@@ -400,7 +395,6 @@ tab[selected]:-moz-window-inactive {
 	.tab-background {
 		border-radius: 0 !important;
 		margin-block: 0 !important;
-		box-shadow: inset 0 1px var(--gnome-toolbar-border-color), inset 0 -1px var(--gnome-toolbar-border-color) !important;
 	}
 	/*Align personal bookmarks v89 */
 	#personal-bookmarks {
@@ -449,10 +443,10 @@ transition: all 150ms ease-in !important;
 
 /* my custom css */
 .tab-loading-burst, .tab-loading-burst::before{
-  height: 24px !important;
+  display: none !important;
 }
+
 #tabbrowser-arrowscrollbox-periphery{
-  border: 1px solid black;
 }
 .tab-background {
   min-height: 24px !important;
@@ -467,4 +461,7 @@ transition: all 150ms ease-in !important;
 }
 .tab-secondary-label{
   display: none !important;
+}
+.tabbrowser-tab[selected="true"] .tab-stack{
+  border-top: 1px solid red !important;
 }
