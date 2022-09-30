@@ -45,12 +45,16 @@ bindswitch --reload --locked lid:on exec 'swaymsg "output * dpms on"'
 
 # Example configuration:
 #
-set $swaylock_cmd = 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 0000008 --separator-color 00000000 --fade-in 0.2'
- exec swayidle -w \
-        timeout 800 $swaylock_cmd \
-        timeout 805 'swaymsg "output * dpms off"' \
-	resume 'swaymsg "output * dpms on"' before-sleep $swaylock_cmd
-#
+set $locker 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 0000008 --separator-color 00000000 --fade-in 0.2'
+
+exec swayidle -w \
+    timeout 300 $locker \
+    timeout 330 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    timeout 30 'if pgrep swaylock; then swaymsg "output * dpms off"; fi' \
+    resume 'if pgrep swaylock; then swaymsg "output * dpms on"; fi'  before-sleep $locker \
+    timeout 600 'systemctl suspend' \
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -84,10 +88,10 @@ input "1739:52542:MSFT0001:00_06CB:CD3E_Touchpad" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
-
     # Lock screen
-    bindsym $mod+Alt+l exec 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+    set $locker_manual swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 0000008 --separator-color 00000000 --fade-in 0.2
 
+    bindsym $mod+Alt+l exec $locker_manual
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
