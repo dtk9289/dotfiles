@@ -68,6 +68,9 @@ set $swaylock_cmd = 'swaylock --screenshots --clock --indicator --indicator-radi
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+input "1739:52542:MSFT0001:00_06CB:CD3E_Touchpad" {
+    tap enabled
+  }
 
 ### Key bindings
 #
