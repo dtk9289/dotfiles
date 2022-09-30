@@ -9,10 +9,9 @@
 /* Centre URL bar text input*/
 #urlbar-input {
 	transition: transform .1s linear;
-	transform: translateX(50%);
 	top: 4px;
 	position: absolute;
-	width: 50%;
+	width: 100%;
 	text-align: center !important;
 }
 /* Unless text input is selected like safari*/

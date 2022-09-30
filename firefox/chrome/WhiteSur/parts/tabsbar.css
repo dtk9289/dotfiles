@@ -465,4 +465,6 @@ transition: all 150ms ease-in !important;
 :root{
   --tab-min-height: 24px !important;
 }
-
+.tab-secondary-label{
+  display: none !important;
+}
