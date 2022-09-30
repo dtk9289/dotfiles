@@ -38,7 +38,7 @@
 
 
     "clock": {
-      "format": "{:%a %b %e  %R}",
+      "format": "{:%R %A %d-%m-%Y}",
       "interval": 30
 },
 
@@ -65,7 +65,8 @@
       "interface": "wlan0", 
       "format-wifi": "   WiFi-On",
       "format-disconnected": "睊 Disconnected",
-      "interval": 60
+      "interval": 60,
+      "on-click": "kitty nmtui"
 },
 
 
