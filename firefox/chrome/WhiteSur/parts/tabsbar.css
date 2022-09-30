@@ -463,5 +463,5 @@ transition: all 150ms ease-in !important;
   display: none !important;
 }
 .tabbrowser-tab[selected="true"] .tab-stack{
-  border-top: 1px solid red !important;
+  border-top: 1px solid #2f2f2f !important;
 }
