@@ -44,7 +44,7 @@
 
 
     "clock": {
-      "format": "{:%R %A %d-%m-%Y}",
+      "format": "{:%A %d-%m-%Y %R}",
       "interval": 30
 },
 
