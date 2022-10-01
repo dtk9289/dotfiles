@@ -1,12 +1,12 @@
 {
 	"layer": "top",	
 	"position": "top",
-  "height": 24,
+  "height": 26,
 
 
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": [],
-  "modules-right": ["network", "temperature", "backlight", "pulseaudio", "battery", "clock", "tray"],
+  "modules-right": ["network", "backlight", "pulseaudio", "custom/adapter", "battery", "clock", "tray"],
 
 
 	"sway/workspaces": {
@@ -30,6 +30,12 @@
    		"on-click-right": "swaymsg 'move scratchpad'"
 },
 
+  "custom/adapter": {
+      "interval": 30,
+      "exec": "~/.config/waybar/scripts/adapter.fish",
+      "format": "{}"
+    },
+
 
     "tray": {
       "icon-size": 18,
@@ -51,11 +57,12 @@
             "normal": 98,
             "warning": 20,
             "critical": 20
-},
+      },
 
       "format": "{icon}   {capacity}%",
       "format-good": "{icon}   {capacity}%", 
       "format-full": "   {capacity}%",
+      "format-charging": " {icon} {capacity}% - {time}",
       "format-icons": ["", "", "", "", ""],
       "interval": 30
 },
