@@ -16,6 +16,7 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 alias gqp git_quick_push
+alias y yarn_convention
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
