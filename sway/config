@@ -150,16 +150,9 @@ input "1739:52542:MSFT0001:00_06CB:CD3E_Touchpad" {
 # Layout stuff:
 #
 # default workspace's output
-    workspace 0 output $main_output
     workspace 1 output $main_output
     workspace 2 output $main_output
     workspace 3 output $main_output
-    workspace 4 output $main_output
-    workspace 5 output $main_output
-    workspace 6 output $main_output
-    workspace 7 output $main_output
-    workspace 8 output $main_output
-    workspace 9 output $main_output
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
