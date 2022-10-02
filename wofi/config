@@ -1,0 +1,7 @@
+term=alacritty
+width=300
+height=200
+insensitive=true
+always_parse_args=true
+show=run
+drun-print_command=true
