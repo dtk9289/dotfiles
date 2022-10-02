@@ -6,7 +6,7 @@
 
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": [],
-  "modules-right": ["network", "backlight", "pulseaudio", "custom/adapter", "battery", "clock", "tray"],
+  "modules-right": ["network", "backlight", "pulseaudio", "custom/adapter", "battery", "clock", "custom/ibus" ,"tray"],
 
 
 	"sway/workspaces": {
@@ -35,20 +35,22 @@
       "exec": "~/.config/waybar/scripts/adapter.fish",
       "format": "{}"
     },
-
-
+  "custom/ibus": {
+      "interval": 1,
+      "exec": "~/.config/waybar/scripts/ibus.fish",
+      "format": "{}",
+      "on-click": "~/.config/waybar/scripts/ibus.fish switch"
+    },
     "tray": {
       "icon-size": 18,
       "spacing": 15
-},
+    },
 
 
     "clock": {
       "format": "{:%A %d-%m-%Y %R}",
       "interval": 30
-},
-
-    
+    },
     "battery": {
       "bat": "BAT0",
       "states": {
@@ -73,7 +75,7 @@
       "format-wifi": "   WiFi-On",
       "format-disconnected": "睊 Disconnected",
       "interval": 60,
-      "on-click": "kitty nmtui"
+      "on-click": "alacritty nmtui"
 },
 
 
