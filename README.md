@@ -3,7 +3,7 @@
 
 ### pacman
 
-wofi brightnessctl neovim archlinux-keyring git openssh networkmanager swaybg ripgrep tree gammastep alacritty nodejs yarn ibus ibus-bamboo
+wofi brightnessctl neovim archlinux-keyring git openssh networkmanager swaybg ripgrep tree gammastep nodejs yarn ibus ibus-bamboo termite grim
 
 ### yay
 
