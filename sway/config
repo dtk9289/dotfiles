@@ -90,7 +90,7 @@ input "1739:52542:MSFT0001:00_06CB:CD3E_Touchpad" {
     bindsym $mod+Shift+c reload
 
     # Screenshot
-    bindsym $mod+Shift+s exec 'grim -g "$(slurp)" - | swappy -f - | wl-copy'
+    bindsym $mod+Shift+s exec 'grim -g "$(slurp)" - | swappy -f -'
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
