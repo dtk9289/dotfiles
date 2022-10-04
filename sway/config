@@ -90,7 +90,7 @@ input "1739:52542:MSFT0001:00_06CB:CD3E_Touchpad" {
     bindsym $mod+Shift+c reload
 
     # Screenshot
-    bindsym $mod+Shift+s exec 'grim -g "$(slurp)" - | swappy -f -'
+    bindsym $mod+Shift+s exec 'grim -g "$(slurp)" - | swappy -f - | wl-copy'
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -222,7 +222,7 @@ bar {
 }
 
 # startup program
-  exec_always eval 'pgrep gammastep > /dev/null || gammastep -P -O 5600 &'
+  exec_always eval 'pgrep gammastep > /dev/null || gammastep -P -O 5200 &'
   exec_always eval 'pgrep ibus-daemon > /dev/null || ibus-daemon -drx'
 
 include /etc/sway/config.d/*
