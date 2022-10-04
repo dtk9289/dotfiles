@@ -4,5 +4,5 @@ if type -q exa
 end
 
 if status --is-login
-  sway
+  command -v sway && sway
 end
