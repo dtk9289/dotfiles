@@ -39,6 +39,9 @@ if has("nvim")
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'm-demare/hlargs.nvim'
+
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

@@ -151,3 +151,5 @@ nvim_lsp.eslint.setup {
   capabilities = capabilities,
   cmd = {"vscode-eslint-language-server", "--stdio"}
 }
+
+nvim_lsp.intelephense.setup{}
