@@ -37,6 +37,7 @@ null_ls.setup({
   -- add your sources / config options here
   sources = {
     require("null-ls").builtins.formatting.prettierd,
+    require("null-ls").builtins.formatting.autopep8,
   },
   debug = true,
   on_attach = function(client, bufnr)

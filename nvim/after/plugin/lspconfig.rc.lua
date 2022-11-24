@@ -152,4 +152,4 @@ nvim_lsp.eslint.setup {
   cmd = {"vscode-eslint-language-server", "--stdio"}
 }
 
-nvim_lsp.intelephense.setup{}
+nvim_lsp.pyright.setup{}
