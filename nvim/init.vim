@@ -28,6 +28,7 @@ set scrolloff=10
 set nuw=2
 set nosc noru nosm
 set expandtab
+set linebreak
 "let loaded_matchparen = 1
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
