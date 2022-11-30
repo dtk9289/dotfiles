@@ -28,11 +28,11 @@ if has("nvim")
   Plug 'windwp/nvim-ts-autotag'
   Plug 'jose-elias-alvarez/null-ls.nvim'
   Plug 'dtk9289/onedark.nvim'
+  Plug 'dtk9289/nvim-ts-rainbow'
 
   Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
   Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
   Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'p00f/nvim-ts-rainbow'
 
   Plug 'terrortylor/nvim-comment'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'

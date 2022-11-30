@@ -26,7 +26,7 @@ ts.setup {
     enable = true,
   },
   rainbow = {
-    enable = false,
+    enable = true,
     extended_mode = false,
     max_file_lines = nil
   },
