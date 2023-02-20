@@ -2,6 +2,8 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 -- After setting up mason-lspconfig you may set up servers via lspconfig
--- require("lspconfig").sumneko_lua.setup {}
--- require("lspconfig").rust_analyzer.setup {}
+require("lspconfig").sumneko_lua.setup {}
+require("lspconfig").rust_analyzer.setup {}
+require("lspconfig").pyright.setup {}
+require("lspconfig").jsonls.setup {}
 -- ...
